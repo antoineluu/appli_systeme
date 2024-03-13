@@ -1,0 +1,329 @@
+Namespace(cstrategy='Entropy', datacfg='./data.yaml', device='cuda:1', mkpetype='RealPE', modelcfg='./ecelms.yaml', seed=2020, size_batch=10, snapshot_name='2021')
+{'SAR_AF_DATA_PATH': '/mnt/e/dlsari/Autofocus/data/', 'filenames': ['ALPSRP020160970_L3600_T10000_25x8192x8192_Defocused_Vr(7128-7178)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP054200670_L1000_T16000_25x8192x8192_Defocused_Vr(7160-7210)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP103336310_L1000_T10000_25x8192x8192_Defocused_Vr(7186-7236)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP110940620_L1000_T18000_25x8192x8192_Defocused_Vr(7163-7213)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP115120970_L2100_T10000_25x8192x8192_Defocused_Vr(7147-7197)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP268560540_L2000_T3000_25x8192x8192_Defocused_Vr(7165-7215)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP269950430_L1000_T18000_25x8192x8192_Defocused_Vr(7170-7220)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP273680670_L2000_T15000_25x8192x8192_Defocused_Vr(7160-7210)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP278552780_L1000_T15000_25x8192x8192_Defocused_Vr(7153-7203)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5'], 'trainid': [1, 2, 3, 4, 7], 'validid': [5, 6], 'testid': [0, 8]}
+{'model': 'BaggingECELMs', 'Qas': [2, 3, 4, 5, 6, 7], 'Qrs': None, 'Convs': [[[32, 63, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 59, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 55, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 51, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 47, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 43, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 39, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 35, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 31, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 27, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 23, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 19, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 15, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 11, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 7, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 3, 1, 1, 1, 0, 0, 1, 1, 1]]]}
+--->Train files sampling mode: sequentially
+['/mnt/e/dlsari/Autofocus/data/ALPSRP054200670_L1000_T16000_25x8192x8192_Defocused_Vr(7160-7210)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', '/mnt/e/dlsari/Autofocus/data/ALPSRP103336310_L1000_T10000_25x8192x8192_Defocused_Vr(7186-7236)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', '/mnt/e/dlsari/Autofocus/data/ALPSRP110940620_L1000_T18000_25x8192x8192_Defocused_Vr(7163-7213)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', '/mnt/e/dlsari/Autofocus/data/ALPSRP115120970_L2100_T10000_25x8192x8192_Defocused_Vr(7147-7197)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', '/mnt/e/dlsari/Autofocus/data/ALPSRP273680670_L2000_T15000_25x8192x8192_Defocused_Vr(7160-7210)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5']
+--->Valid files sampling mode: sequentially
+['/mnt/e/dlsari/Autofocus/data/ALPSRP268560540_L2000_T3000_25x8192x8192_Defocused_Vr(7165-7215)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', '/mnt/e/dlsari/Autofocus/data/ALPSRP269950430_L1000_T18000_25x8192x8192_Defocused_Vr(7170-7220)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5']
+--->Test files sampling mode: sequentially
+['/mnt/e/dlsari/Autofocus/data/ALPSRP020160970_L3600_T10000_25x8192x8192_Defocused_Vr(7128-7178)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', '/mnt/e/dlsari/Autofocus/data/ALPSRP278552780_L1000_T15000_25x8192x8192_Defocused_Vr(7153-7203)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5']
+tensor(-0.5000) tensor(0.4961)
+--->Train: torch.Size([20000, 256, 256, 2]) torch.Size([20000, 6]) torch.Size([20000, 6])
+--->Valid: torch.Size([8000, 256, 256, 2]) torch.Size([8000, 6]) torch.Size([8000, 6])
+--->Test: torch.Size([8000, 256, 256, 2]) torch.Size([8000, 6]) torch.Size([8000, 6])
+Orignal Entropy(Train, Valid, Test): 9.987627029418945 10.29109001159668 10.047439575195312
+Orignal Contrast(Train, Valid, Test): -3.3819918632507324 -1.986007571220398 -3.4077813625335693
+/usr/local/lib/python3.6/dist-packages/torch/cuda/__init__.py:104: UserWarning: 
+GeForce RTX 3090 with CUDA capability sm_86 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_70.
+If you want to use the GeForce RTX 3090 GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(incompatible_device_warn.format(device_name, capability, " ".join(arch_list), device_name))
+cuda:1
+GeForce GTX 1080 Ti
+Torch Version:  1.8.1+cu102
+Torch CUDA Version:  10.2
+CUDNN Version:  7605
+CUDA TF32:  False
+CUDNN TF32:  False
+CUDNN Benchmark:  True
+CUDNN Deterministic:  True
+BaggingECELMs(
+  (celms): ModuleList(
+    (0): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[63, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (1): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[59, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (2): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[55, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (3): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[51, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (4): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[47, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (5): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[43, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (6): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[39, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (7): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[35, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (8): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[31, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (9): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[27, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (10): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[23, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (11): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[19, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (12): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[15, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (13): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[11, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (14): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[7, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (15): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[3, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+  )
+  (combine_metric): Entropy()
+  (loss_mse_fn): MSELoss()
+)
+--->Train focuser: 0, C:     0.010000, loss: 15182.9971, entropy: 9.9772, l1norm: 9.8373, contrast: -3.4361, time: 12.230407238006592s
+--->Valid focuser: 0, C:     0.010000, loss: 24940.1097, entropy: 10.2908, l1norm: 9.5957, contrast: -1.9908, time: 5.2343292236328125s
+--->Train focuser: 0, C:     0.100000, loss: 9730.2109, entropy: 9.9412, l1norm: 9.8302, contrast: -3.6599, time: 29.16822648048401s
+--->Valid focuser: 0, C:     0.100000, loss: 25709.0576, entropy: 10.2855, l1norm: 9.5946, contrast: -2.0191, time: 5.211867094039917s
+--->Train focuser: 0, C:     1.000000, loss: 2426.9045, entropy: 9.8686, l1norm: 9.8160, contrast: -4.1867, time: 46.7732207775116s
+--->Valid focuser: 0, C:     1.000000, loss: 29882.4327, entropy: 10.2835, l1norm: 9.5943, contrast: -2.0326, time: 5.205134630203247s
+--->Train focuser: 0, C:    10.000000, loss: 218.1869, entropy: 9.8253, l1norm: 9.8075, contrast: -4.5558, time: 63.479642152786255s
+--->Valid focuser: 0, C:    10.000000, loss: 38404.6025, entropy: 10.2916, l1norm: 9.5961, contrast: -1.9994, time: 5.222332239151001s
+--->Train focuser: 0, C:   100.000000, loss: 6567.4819, entropy: 9.9442, l1norm: 9.8307, contrast: -3.6488, time: 80.64726066589355s
+--->Valid focuser: 0, C:   100.000000, loss: 49534.3424, entropy: 10.2992, l1norm: 9.5977, contrast: -1.9688, time: 5.27412748336792s
+--->Train focuser: 1, C:     0.010000, loss: 15524.4199, entropy: 9.9711, l1norm: 9.8519, contrast: -3.5055, time: 97.9613471031189s
+--->Valid focuser: 1, C:     0.010000, loss: 24829.5976, entropy: 10.2910, l1norm: 9.5957, contrast: -1.9884, time: 5.209019660949707s
+--->Train focuser: 1, C:     0.100000, loss: 10024.5293, entropy: 9.9305, l1norm: 9.8439, contrast: -3.7758, time: 113.83826971054077s
+--->Valid focuser: 1, C:     0.100000, loss: 25645.2554, entropy: 10.2859, l1norm: 9.5947, contrast: -2.0144, time: 5.2472217082977295s
+--->Train focuser: 1, C:     1.000000, loss: 2506.6819, entropy: 9.8549, l1norm: 9.8291, contrast: -4.3161, time: 130.15732145309448s
+--->Valid focuser: 1, C:     1.000000, loss: 30124.2008, entropy: 10.2830, l1norm: 9.5942, contrast: -2.0333, time: 5.225711345672607s
+--->Train focuser: 1, C:    10.000000, loss: 206.6079, entropy: 9.8018, l1norm: 9.8188, contrast: -4.7643, time: 145.97532200813293s
+--->Valid focuser: 1, C:    10.000000, loss: 39379.5985, entropy: 10.2897, l1norm: 9.5957, contrast: -2.0068, time: 5.14836311340332s
+--->Train focuser: 1, C:   100.000000, loss: 3064.5884, entropy: 9.9236, l1norm: 9.8425, contrast: -3.7921, time: 162.122661113739s
+--->Valid focuser: 1, C:   100.000000, loss: 46106.1315, entropy: 10.2980, l1norm: 9.5975, contrast: -1.9696, time: 5.315935850143433s
+--->Train focuser: 2, C:     0.010000, loss: 14830.4697, entropy: 9.9758, l1norm: 9.8482, contrast: -3.5111, time: 178.3322036266327s
+--->Valid focuser: 2, C:     0.010000, loss: 24878.3360, entropy: 10.2901, l1norm: 9.5955, contrast: -1.9942, time: 5.227921009063721s
+--->Train focuser: 2, C:     0.100000, loss: 9283.7598, entropy: 9.9325, l1norm: 9.8395, contrast: -3.7667, time: 193.531920671463s
+--->Valid focuser: 2, C:     0.100000, loss: 25755.6619, entropy: 10.2838, l1norm: 9.5942, contrast: -2.0272, time: 5.1808905601501465s
+--->Train focuser: 2, C:     1.000000, loss: 2262.9673, entropy: 9.8587, l1norm: 9.8250, contrast: -4.2938, time: 208.6131410598755s
+--->Valid focuser: 2, C:     1.000000, loss: 29940.6828, entropy: 10.2805, l1norm: 9.5936, contrast: -2.0488, time: 5.311219930648804s
+--->Train focuser: 2, C:    10.000000, loss: 170.8277, entropy: 9.8213, l1norm: 9.8178, contrast: -4.6347, time: 223.72399187088013s
+--->Valid focuser: 2, C:    10.000000, loss: 38177.7704, entropy: 10.2880, l1norm: 9.5954, contrast: -2.0181, time: 5.205466270446777s
+--->Train focuser: 2, C:   100.000000, loss: 6298.1938, entropy: 10.0285, l1norm: 9.8580, contrast: -3.1389, time: 238.59928512573242s
+--->Valid focuser: 2, C:   100.000000, loss: 48770.3698, entropy: 10.3148, l1norm: 9.6015, contrast: -1.9119, time: 5.2255401611328125s
+--->Train focuser: 3, C:     0.010000, loss: 14964.2812, entropy: 9.9730, l1norm: 9.8462, contrast: -3.5140, time: 255.5491063594818s
+--->Valid focuser: 3, C:     0.010000, loss: 24735.7063, entropy: 10.2901, l1norm: 9.5955, contrast: -1.9903, time: 5.295083045959473s
+--->Train focuser: 3, C:     0.100000, loss: 9357.2539, entropy: 9.9273, l1norm: 9.8369, contrast: -3.8076, time: 272.1028835773468s
+--->Valid focuser: 3, C:     0.100000, loss: 25385.7218, entropy: 10.2827, l1norm: 9.5940, contrast: -2.0319, time: 5.353936195373535s
+--->Train focuser: 3, C:     1.000000, loss: 2249.5396, entropy: 9.8514, l1norm: 9.8219, contrast: -4.3648, time: 288.13346767425537s
+--->Valid focuser: 3, C:     1.000000, loss: 29468.3731, entropy: 10.2779, l1norm: 9.5931, contrast: -2.0585, time: 5.260715007781982s
+--->Train focuser: 3, C:    10.000000, loss: 145.2013, entropy: 9.8069, l1norm: 9.8132, contrast: -4.7530, time: 304.9476041793823s
+--->Valid focuser: 3, C:    10.000000, loss: 37626.7611, entropy: 10.2837, l1norm: 9.5943, contrast: -2.0329, time: 5.338687896728516s
+--->Train focuser: 3, C:   100.000000, loss: 4223.3877, entropy: 9.8929, l1norm: 9.8300, contrast: -4.0493, time: 321.3381779193878s
+--->Valid focuser: 3, C:   100.000000, loss: 44675.5549, entropy: 10.2892, l1norm: 9.5956, contrast: -2.0100, time: 5.259129285812378s
+--->Train focuser: 4, C:     0.010000, loss: 15364.3809, entropy: 9.9613, l1norm: 9.8332, contrast: -3.5005, time: 338.955735206604s
+--->Valid focuser: 4, C:     0.010000, loss: 24649.2297, entropy: 10.2888, l1norm: 9.5952, contrast: -1.9994, time: 5.334746837615967s
+--->Train focuser: 4, C:     0.100000, loss: 9360.5117, entropy: 9.9077, l1norm: 9.8227, contrast: -3.8485, time: 356.0397083759308s
+--->Valid focuser: 4, C:     0.100000, loss: 25151.8528, entropy: 10.2777, l1norm: 9.5929, contrast: -2.0575, time: 5.313802480697632s
+--->Train focuser: 4, C:     1.000000, loss: 2154.8005, entropy: 9.8399, l1norm: 9.8094, contrast: -4.3387, time: 372.7673134803772s
+--->Valid focuser: 4, C:     1.000000, loss: 29441.2451, entropy: 10.2732, l1norm: 9.5919, contrast: -2.0743, time: 5.399550199508667s
+--->Train focuser: 4, C:    10.000000, loss: 235.7153, entropy: 9.8080, l1norm: 9.8031, contrast: -4.6089, time: 389.95098423957825s
+--->Valid focuser: 4, C:    10.000000, loss: 37611.9825, entropy: 10.2790, l1norm: 9.5933, contrast: -2.0481, time: 5.360684633255005s
+--->Train focuser: 4, C:   100.000000, loss: 3151.2812, entropy: 10.0282, l1norm: 9.8464, contrast: -3.1211, time: 407.18799352645874s
+--->Valid focuser: 4, C:   100.000000, loss: 43187.6035, entropy: 10.3076, l1norm: 9.5999, contrast: -1.9405, time: 5.409956932067871s
+--->Train focuser: 5, C:     0.010000, loss: 15306.0869, entropy: 9.9606, l1norm: 9.8484, contrast: -3.5310, time: 424.6153736114502s
+--->Valid focuser: 5, C:     0.010000, loss: 24685.8014, entropy: 10.2891, l1norm: 9.5953, contrast: -1.9967, time: 5.387380361557007s
+--->Train focuser: 5, C:     0.100000, loss: 9429.9170, entropy: 9.9098, l1norm: 9.8383, contrast: -3.8697, time: 440.6433618068695s
+--->Valid focuser: 5, C:     0.100000, loss: 25186.2282, entropy: 10.2787, l1norm: 9.5931, contrast: -2.0466, time: 5.284268617630005s
+--->Train focuser: 5, C:     1.000000, loss: 2268.8247, entropy: 9.8431, l1norm: 9.8253, contrast: -4.3546, time: 456.90260457992554s
+--->Valid focuser: 5, C:     1.000000, loss: 29583.7843, entropy: 10.2745, l1norm: 9.5924, contrast: -2.0713, time: 5.39376974105835s
+--->Train focuser: 5, C:    10.000000, loss: 168.9648, entropy: 9.8067, l1norm: 9.8182, contrast: -4.6693, time: 473.21429347991943s
+--->Valid focuser: 5, C:    10.000000, loss: 37981.9942, entropy: 10.2815, l1norm: 9.5939, contrast: -2.0439, time: 5.283807992935181s
+--->Train focuser: 5, C:   100.000000, loss: 8785.8311, entropy: 9.9491, l1norm: 9.8460, contrast: -3.5797, time: 489.4129288196564s
+--->Valid focuser: 5, C:   100.000000, loss: 50326.2780, entropy: 10.2937, l1norm: 9.5967, contrast: -1.9936, time: 5.316313743591309s
+--->Train focuser: 6, C:     0.010000, loss: 15551.4951, entropy: 9.9742, l1norm: 9.8413, contrast: -3.4470, time: 505.78290486335754s
+--->Valid focuser: 6, C:     0.010000, loss: 24736.0239, entropy: 10.2894, l1norm: 9.5954, contrast: -1.9957, time: 5.32826566696167s
+--->Train focuser: 6, C:     0.100000, loss: 9517.9570, entropy: 9.9284, l1norm: 9.8320, contrast: -3.7401, time: 521.498218536377s
+--->Valid focuser: 6, C:     0.100000, loss: 25374.3440, entropy: 10.2800, l1norm: 9.5935, contrast: -2.0427, time: 5.304484844207764s
+--->Train focuser: 6, C:     1.000000, loss: 2193.6365, entropy: 9.8596, l1norm: 9.8184, contrast: -4.2127, time: 536.9043719768524s
+--->Valid focuser: 6, C:     1.000000, loss: 29742.9046, entropy: 10.2750, l1norm: 9.5924, contrast: -2.0680, time: 5.316577196121216s
+--->Train focuser: 6, C:    10.000000, loss: 148.4270, entropy: 9.8196, l1norm: 9.8106, contrast: -4.5454, time: 552.7730569839478s
+--->Valid focuser: 6, C:    10.000000, loss: 37759.0244, entropy: 10.2817, l1norm: 9.5939, contrast: -2.0384, time: 5.376564979553223s
+--->Train focuser: 6, C:   100.000000, loss: 5222.3208, entropy: 9.9526, l1norm: 9.8368, contrast: -3.5659, time: 568.1125590801239s
+--->Valid focuser: 6, C:   100.000000, loss: 45607.0017, entropy: 10.2902, l1norm: 9.5959, contrast: -2.0075, time: 5.265887260437012s
+--->Train focuser: 7, C:     0.010000, loss: 14980.4326, entropy: 9.9752, l1norm: 9.8429, contrast: -3.4825, time: 585.2708597183228s
+--->Valid focuser: 7, C:     0.010000, loss: 24597.6965, entropy: 10.2872, l1norm: 9.5949, contrast: -2.0057, time: 5.369129657745361s
+--->Train focuser: 7, C:     0.100000, loss: 8979.2695, entropy: 9.9164, l1norm: 9.8310, contrast: -3.8521, time: 602.4225645065308s
+--->Valid focuser: 7, C:     0.100000, loss: 24976.5084, entropy: 10.2729, l1norm: 9.5919, contrast: -2.0770, time: 5.4602344036102295s
+--->Train focuser: 7, C:     1.000000, loss: 2071.1316, entropy: 9.8489, l1norm: 9.8178, contrast: -4.3569, time: 618.9400734901428s
+--->Valid focuser: 7, C:     1.000000, loss: 29224.5980, entropy: 10.2675, l1norm: 9.5908, contrast: -2.1073, time: 5.428237438201904s
+--->Train focuser: 7, C:    10.000000, loss: 143.9232, entropy: 9.8152, l1norm: 9.8113, contrast: -4.6538, time: 635.893711566925s
+--->Valid focuser: 7, C:    10.000000, loss: 37101.9950, entropy: 10.2745, l1norm: 9.5924, contrast: -2.0751, time: 5.513175964355469s
+--->Train focuser: 7, C:   100.000000, loss: 5502.7852, entropy: 9.9326, l1norm: 9.8342, contrast: -3.7427, time: 652.2561497688293s
+--->Valid focuser: 7, C:   100.000000, loss: 44869.3439, entropy: 10.2833, l1norm: 9.5944, contrast: -2.0414, time: 5.378786087036133s
+--->Train focuser: 8, C:     0.010000, loss: 14557.6836, entropy: 9.9637, l1norm: 9.8423, contrast: -3.5328, time: 670.4120781421661s
+--->Valid focuser: 8, C:     0.010000, loss: 24373.4467, entropy: 10.2856, l1norm: 9.5945, contrast: -2.0127, time: 5.474061489105225s
+--->Train focuser: 8, C:     0.100000, loss: 8469.1084, entropy: 9.8960, l1norm: 9.8288, contrast: -3.9916, time: 687.6131618022919s
+--->Valid focuser: 8, C:     0.100000, loss: 24528.8478, entropy: 10.2675, l1norm: 9.5908, contrast: -2.1060, time: 5.414308071136475s
+--->Train focuser: 8, C:     1.000000, loss: 1914.9117, entropy: 9.8392, l1norm: 9.8178, contrast: -4.4161, time: 704.634521484375s
+--->Valid focuser: 8, C:     1.000000, loss: 28552.9656, entropy: 10.2633, l1norm: 9.5899, contrast: -2.1290, time: 5.453667640686035s
+--->Train focuser: 8, C:    10.000000, loss: 176.3961, entropy: 9.8094, l1norm: 9.8121, contrast: -4.6791, time: 722.0856244564056s
+--->Valid focuser: 8, C:    10.000000, loss: 35771.4409, entropy: 10.2700, l1norm: 9.5914, contrast: -2.0960, time: 5.461537837982178s
+--->Train focuser: 8, C:   100.000000, loss: 11855.9775, entropy: 10.0967, l1norm: 9.8689, contrast: -2.7964, time: 739.5657134056091s
+--->Valid focuser: 8, C:   100.000000, loss: 50901.9701, entropy: 10.3411, l1norm: 9.6076, contrast: -1.8006, time: 5.495318651199341s
+--->Train focuser: 9, C:     0.010000, loss: 14790.0303, entropy: 9.9551, l1norm: 9.8434, contrast: -3.5418, time: 756.6959578990936s
+--->Valid focuser: 9, C:     0.010000, loss: 24664.6081, entropy: 10.2867, l1norm: 9.5948, contrast: -2.0093, time: 5.486684322357178s
+--->Train focuser: 9, C:     0.100000, loss: 8694.8799, entropy: 9.8914, l1norm: 9.8305, contrast: -3.9561, time: 773.2328956127167s
+--->Valid focuser: 9, C:     0.100000, loss: 24934.8786, entropy: 10.2712, l1norm: 9.5916, contrast: -2.0886, time: 5.388548135757446s
+--->Train focuser: 9, C:     1.000000, loss: 1981.1357, entropy: 9.8303, l1norm: 9.8185, contrast: -4.4006, time: 789.3090155124664s
+--->Valid focuser: 9, C:     1.000000, loss: 29089.4989, entropy: 10.2675, l1norm: 9.5908, contrast: -2.1074, time: 5.491206169128418s
+--->Train focuser: 9, C:    10.000000, loss: 252.9387, entropy: 9.8299, l1norm: 9.8187, contrast: -4.4213, time: 805.7963540554047s
+--->Valid focuser: 9, C:    10.000000, loss: 36844.6100, entropy: 10.2754, l1norm: 9.5926, contrast: -2.0728, time: 5.464785814285278s
+--->Train focuser: 9, C:   100.000000, loss: 10151.2910, entropy: 10.0432, l1norm: 9.8607, contrast: -3.0217, time: 822.0967381000519s
+--->Valid focuser: 9, C:   100.000000, loss: 49538.4092, entropy: 10.3162, l1norm: 9.6019, contrast: -1.9057, time: 5.474156379699707s
+--->Train focuser: 10, C:     0.010000, loss: 14022.9805, entropy: 9.9565, l1norm: 9.8565, contrast: -3.5681, time: 839.0557460784912s
+--->Valid focuser: 10, C:     0.010000, loss: 24301.3631, entropy: 10.2837, l1norm: 9.5941, contrast: -2.0221, time: 5.472233057022095s
+--->Train focuser: 10, C:     0.100000, loss: 8169.9414, entropy: 9.8867, l1norm: 9.8424, contrast: -4.0144, time: 854.890971660614s
+--->Valid focuser: 10, C:     0.100000, loss: 24569.1188, entropy: 10.2646, l1norm: 9.5902, contrast: -2.1247, time: 5.480405807495117s
+--->Train focuser: 10, C:     1.000000, loss: 1936.3413, entropy: 9.8298, l1norm: 9.8314, contrast: -4.4502, time: 870.6886701583862s
+--->Valid focuser: 10, C:     1.000000, loss: 28773.8162, entropy: 10.2629, l1norm: 9.5899, contrast: -2.1387, time: 5.4357826709747314s
+--->Train focuser: 10, C:    10.000000, loss: 152.8971, entropy: 9.8044, l1norm: 9.8265, contrast: -4.6720, time: 886.7822012901306s
+--->Valid focuser: 10, C:    10.000000, loss: 36001.2427, entropy: 10.2701, l1norm: 9.5914, contrast: -2.1050, time: 5.464364051818848s
+--->Train focuser: 10, C:   100.000000, loss: 879.1036, entropy: 9.7992, l1norm: 9.8254, contrast: -4.7125, time: 902.5971939563751s
+--->Valid focuser: 10, C:   100.000000, loss: 39319.4007, entropy: 10.2718, l1norm: 9.5918, contrast: -2.0972, time: 5.428781509399414s
+--->Train focuser: 11, C:     0.010000, loss: 14781.0146, entropy: 9.9601, l1norm: 9.8369, contrast: -3.5572, time: 920.0039174556732s
+--->Valid focuser: 11, C:     0.010000, loss: 24356.3793, entropy: 10.2827, l1norm: 9.5939, contrast: -2.0277, time: 5.513792037963867s
+--->Train focuser: 11, C:     0.100000, loss: 8600.6494, entropy: 9.9005, l1norm: 9.8250, contrast: -3.9126, time: 937.385124206543s
+--->Valid focuser: 11, C:     0.100000, loss: 24717.4794, entropy: 10.2645, l1norm: 9.5901, contrast: -2.1231, time: 5.629798412322998s
+--->Train focuser: 11, C:     1.000000, loss: 2070.8787, entropy: 9.8480, l1norm: 9.8149, contrast: -4.3059, time: 954.0298733711243s
+--->Valid focuser: 11, C:     1.000000, loss: 29422.8656, entropy: 10.2646, l1norm: 9.5901, contrast: -2.1245, time: 5.464627981185913s
+--->Train focuser: 11, C:    10.000000, loss: 254.3625, entropy: 9.8161, l1norm: 9.8086, contrast: -4.5769, time: 971.1816277503967s
+--->Valid focuser: 11, C:    10.000000, loss: 37647.2306, entropy: 10.2721, l1norm: 9.5917, contrast: -2.0876, time: 5.589535236358643s
+--->Train focuser: 11, C:   100.000000, loss: 5196.2915, entropy: 9.9631, l1norm: 9.8374, contrast: -3.5068, time: 987.8854765892029s
+--->Valid focuser: 11, C:   100.000000, loss: 46616.8223, entropy: 10.2858, l1norm: 9.5950, contrast: -2.0308, time: 5.464946269989014s
+--->Train focuser: 12, C:     0.010000, loss: 14583.9062, entropy: 9.9427, l1norm: 9.8399, contrast: -3.6866, time: 1005.6913084983826s
+--->Valid focuser: 12, C:     0.010000, loss: 24496.2083, entropy: 10.2835, l1norm: 9.5941, contrast: -2.0223, time: 5.564915180206299s
+--->Train focuser: 12, C:     0.100000, loss: 8641.0254, entropy: 9.8758, l1norm: 9.8263, contrast: -4.1492, time: 1022.9276690483093s
+--->Valid focuser: 12, C:     0.100000, loss: 24936.0653, entropy: 10.2657, l1norm: 9.5904, contrast: -2.1165, time: 5.542335271835327s
+--->Train focuser: 12, C:     1.000000, loss: 2182.2808, entropy: 9.8204, l1norm: 9.8157, contrast: -4.5915, time: 1040.602247953415s
+--->Valid focuser: 12, C:     1.000000, loss: 29529.7257, entropy: 10.2630, l1norm: 9.5898, contrast: -2.1309, time: 5.66697096824646s
+--->Train focuser: 12, C:    10.000000, loss: 213.4138, entropy: 9.7898, l1norm: 9.8099, contrast: -4.8667, time: 1057.97145652771s
+--->Valid focuser: 12, C:    10.000000, loss: 37937.5183, entropy: 10.2689, l1norm: 9.5911, contrast: -2.1040, time: 5.531585216522217s
+--->Train focuser: 12, C:   100.000000, loss: 1594.6912, entropy: 9.9649, l1norm: 9.8438, contrast: -3.5156, time: 1075.5573952198029s
+--->Valid focuser: 12, C:   100.000000, loss: 42836.1934, entropy: 10.2890, l1norm: 9.5958, contrast: -2.0261, time: 5.629664659500122s
+--->Train focuser: 13, C:     0.010000, loss: 14777.7334, entropy: 9.9449, l1norm: 9.8469, contrast: -3.6346, time: 1092.8120155334473s
+--->Valid focuser: 13, C:     0.010000, loss: 24440.5497, entropy: 10.2819, l1norm: 9.5938, contrast: -2.0335, time: 5.594311475753784s
+--->Train focuser: 13, C:     0.100000, loss: 8817.1484, entropy: 9.8828, l1norm: 9.8344, contrast: -4.0532, time: 1109.0977942943573s
+--->Valid focuser: 13, C:     0.100000, loss: 24868.8511, entropy: 10.2656, l1norm: 9.5903, contrast: -2.1155, time: 5.556983232498169s
+--->Train focuser: 13, C:     1.000000, loss: 2445.4045, entropy: 9.8311, l1norm: 9.8245, contrast: -4.4475, time: 1125.5567796230316s
+--->Valid focuser: 13, C:     1.000000, loss: 29770.6565, entropy: 10.2661, l1norm: 9.5904, contrast: -2.1129, time: 5.56475305557251s
+--->Train focuser: 13, C:    10.000000, loss: 326.8575, entropy: 9.7975, l1norm: 9.8179, contrast: -4.7355, time: 1141.6772363185883s
+--->Valid focuser: 13, C:    10.000000, loss: 39255.8392, entropy: 10.2731, l1norm: 9.5920, contrast: -2.0832, time: 5.467529773712158s
+--->Train focuser: 13, C:   100.000000, loss: 1042.0725, entropy: 9.8241, l1norm: 9.8233, contrast: -4.5293, time: 1158.119989156723s
+--->Valid focuser: 13, C:   100.000000, loss: 44041.2223, entropy: 10.2759, l1norm: 9.5927, contrast: -2.0721, time: 5.532167673110962s
+--->Train focuser: 14, C:     0.010000, loss: 14454.7256, entropy: 9.9660, l1norm: 9.8480, contrast: -3.5556, time: 1174.9733636379242s
+--->Valid focuser: 14, C:     0.010000, loss: 24626.2312, entropy: 10.2865, l1norm: 9.5948, contrast: -2.0107, time: 5.608165979385376s
+--->Train focuser: 14, C:     0.100000, loss: 8854.8164, entropy: 9.9147, l1norm: 9.8378, contrast: -3.8989, time: 1191.2709589004517s
+--->Valid focuser: 14, C:     0.100000, loss: 25324.6047, entropy: 10.2751, l1norm: 9.5923, contrast: -2.0670, time: 5.618304252624512s
+--->Train focuser: 14, C:     1.000000, loss: 2717.1440, entropy: 9.8587, l1norm: 9.8269, contrast: -4.3061, time: 1207.3469786643982s
+--->Valid focuser: 14, C:     1.000000, loss: 30325.2049, entropy: 10.2750, l1norm: 9.5924, contrast: -2.0721, time: 5.624865531921387s
+--->Train focuser: 14, C:    10.000000, loss: 297.8185, entropy: 9.8177, l1norm: 9.8188, contrast: -4.6452, time: 1223.295078277588s
+--->Valid focuser: 14, C:    10.000000, loss: 40608.7091, entropy: 10.2842, l1norm: 9.5944, contrast: -2.0334, time: 5.574079513549805s
+--->Train focuser: 14, C:   100.000000, loss: 4891.8057, entropy: 9.8264, l1norm: 9.8206, contrast: -4.5735, time: 1239.0768659114838s
+--->Valid focuser: 14, C:   100.000000, loss: 50297.8838, entropy: 10.2878, l1norm: 9.5952, contrast: -2.0188, time: 5.574207544326782s
+--->Train focuser: 15, C:     0.010000, loss: 14919.0361, entropy: 9.9667, l1norm: 9.8533, contrast: -3.4666, time: 1256.2036924362183s
+--->Valid focuser: 15, C:     0.010000, loss: 24831.1546, entropy: 10.2904, l1norm: 9.5956, contrast: -1.9939, time: 5.524946928024292s
+--->Train focuser: 15, C:     0.100000, loss: 10221.2803, entropy: 9.9345, l1norm: 9.8471, contrast: -3.6734, time: 1273.8052625656128s
+--->Valid focuser: 15, C:     0.100000, loss: 26190.3207, entropy: 10.2875, l1norm: 9.5951, contrast: -2.0133, time: 5.637969255447388s
+--->Train focuser: 15, C:     1.000000, loss: 4311.0391, entropy: 9.8866, l1norm: 9.8381, contrast: -4.0275, time: 1290.755116701126s
+--->Valid focuser: 15, C:     1.000000, loss: 31790.3862, entropy: 10.2894, l1norm: 9.5957, contrast: -2.0114, time: 5.497687101364136s
+--->Train focuser: 15, C:    10.000000, loss: 827.8491, entropy: 9.8334, l1norm: 9.8275, contrast: -4.4306, time: 1307.8404998779297s
+--->Valid focuser: 15, C:    10.000000, loss: 44083.5763, entropy: 10.2997, l1norm: 9.5981, contrast: -1.9690, time: 5.619409561157227s
+--->Train focuser: 15, C:   100.000000, loss: 8143.2178, entropy: 10.0256, l1norm: 9.8648, contrast: -3.1257, time: 1324.8544907569885s
+--->Valid focuser: 15, C:   100.000000, loss: 62051.3605, entropy: 10.3216, l1norm: 9.6031, contrast: -1.8910, time: 5.595834255218506s
+---Best C [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.1, 1.0, 0.1, 1.0, 0.1]
+--->Train ensemble: 16, loss: 12670.9490, entropy: 9.8131, l1norm: 9.7627, contrast: -4.6349, time: 170.49712800979614s
+--->Valid ensemble: 16, loss: 27060.5001, entropy: 10.2158, l1norm: 9.5803, contrast: -2.4138, time: 67.90616130828857s
+--->Test ensemble: 16, loss: 21513.5641, entropy: 9.8808, l1norm: 9.8124, contrast: -4.8025, time: 67.83635807037354s
+[Finished in 1996.7s]

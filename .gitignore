@@ -1,0 +1,4 @@
+__pycache__
+snapshot/tests/
+snapshot/BaggingECELMs/
+tensors/

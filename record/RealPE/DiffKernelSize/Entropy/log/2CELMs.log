@@ -1,0 +1,78 @@
+Namespace(cstrategy='Entropy', datacfg='./data.yaml', device='cuda:1', mkpetype='RealPE', modelcfg='./ecelms.yaml', seed=2020, size_batch=10, snapshot_name='2021')
+{'SAR_AF_DATA_PATH': '/mnt/e/dlsari/Autofocus/data/', 'filenames': ['ALPSRP020160970_L3600_T10000_25x8192x8192_Defocused_Vr(7128-7178)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP054200670_L1000_T16000_25x8192x8192_Defocused_Vr(7160-7210)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP103336310_L1000_T10000_25x8192x8192_Defocused_Vr(7186-7236)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP110940620_L1000_T18000_25x8192x8192_Defocused_Vr(7163-7213)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP115120970_L2100_T10000_25x8192x8192_Defocused_Vr(7147-7197)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP268560540_L2000_T3000_25x8192x8192_Defocused_Vr(7165-7215)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP269950430_L1000_T18000_25x8192x8192_Defocused_Vr(7170-7220)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP273680670_L2000_T15000_25x8192x8192_Defocused_Vr(7160-7210)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', 'ALPSRP278552780_L1000_T15000_25x8192x8192_Defocused_Vr(7153-7203)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5'], 'trainid': [1, 2, 3, 4, 7], 'validid': [5, 6], 'testid': [0, 8]}
+{'model': 'BaggingECELMs', 'Qas': [2, 3, 4, 5, 6, 7], 'Qrs': None, 'Convs': [[[32, 63, 1, 1, 1, 0, 0, 1, 1, 1]], [[32, 31, 1, 1, 1, 0, 0, 1, 1, 1]]]}
+--->Train files sampling mode: sequentially
+['/mnt/e/dlsari/Autofocus/data/ALPSRP054200670_L1000_T16000_25x8192x8192_Defocused_Vr(7160-7210)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', '/mnt/e/dlsari/Autofocus/data/ALPSRP103336310_L1000_T10000_25x8192x8192_Defocused_Vr(7186-7236)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', '/mnt/e/dlsari/Autofocus/data/ALPSRP110940620_L1000_T18000_25x8192x8192_Defocused_Vr(7163-7213)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', '/mnt/e/dlsari/Autofocus/data/ALPSRP115120970_L2100_T10000_25x8192x8192_Defocused_Vr(7147-7197)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', '/mnt/e/dlsari/Autofocus/data/ALPSRP273680670_L2000_T15000_25x8192x8192_Defocused_Vr(7160-7210)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5']
+--->Valid files sampling mode: sequentially
+['/mnt/e/dlsari/Autofocus/data/ALPSRP268560540_L2000_T3000_25x8192x8192_Defocused_Vr(7165-7215)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', '/mnt/e/dlsari/Autofocus/data/ALPSRP269950430_L1000_T18000_25x8192x8192_Defocused_Vr(7170-7220)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5']
+--->Test files sampling mode: sequentially
+['/mnt/e/dlsari/Autofocus/data/ALPSRP020160970_L3600_T10000_25x8192x8192_Defocused_Vr(7128-7178)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5', '/mnt/e/dlsari/Autofocus/data/ALPSRP278552780_L1000_T15000_25x8192x8192_Defocused_Vr(7153-7203)_FocusedEach_8000x256x256_AutoFocusPolyPhiMinEntropy_Epoch400.h5']
+tensor(-0.5000) tensor(0.4961)
+--->Train: torch.Size([20000, 256, 256, 2]) torch.Size([20000, 6]) torch.Size([20000, 6])
+--->Valid: torch.Size([8000, 256, 256, 2]) torch.Size([8000, 6]) torch.Size([8000, 6])
+--->Test: torch.Size([8000, 256, 256, 2]) torch.Size([8000, 6]) torch.Size([8000, 6])
+Orignal Entropy(Train, Valid, Test): 9.987627029418945 10.29109001159668 10.047439575195312
+Orignal Contrast(Train, Valid, Test): -3.3819918632507324 -1.986007571220398 -3.4077813625335693
+/usr/local/lib/python3.6/dist-packages/torch/cuda/__init__.py:104: UserWarning: 
+GeForce RTX 3090 with CUDA capability sm_86 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_70.
+If you want to use the GeForce RTX 3090 GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(incompatible_device_warn.format(device_name, capability, " ".join(arch_list), device_name))
+cuda:1
+GeForce GTX 1080 Ti
+Torch Version:  1.8.1+cu102
+Torch CUDA Version:  10.2
+CUDNN Version:  7605
+CUDA TF32:  False
+CUDNN TF32:  False
+CUDNN Benchmark:  True
+CUDNN Deterministic:  True
+BaggingECELMs(
+  (celms): ModuleList(
+    (0): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[63, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+    (1): CELM(
+      (features): Sequential(
+        (conv1): Conv2d(2, 32, kernel_size=[31, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1])
+        (in1): InstanceNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+        (relu1): LeakyReLU(negative_slope=0.01)
+        (gapool): AdaptiveAvgPool2d(output_size=(None, 1))
+      )
+    )
+  )
+  (combine_metric): Entropy()
+  (loss_mse_fn): MSELoss()
+)
+
+--->Train focuser: 0, C:     0.010000, loss: 15182.9971, entropy: 9.9772, l1norm: 9.8373, contrast: -3.4361, time: 10.13654112815857s
+--->Valid focuser: 0, C:     0.010000, loss: 24940.1097, entropy: 10.2908, l1norm: 9.5957, contrast: -1.9908, time: 5.072094917297363s
+--->Train focuser: 0, C:     0.100000, loss: 9730.2109, entropy: 9.9412, l1norm: 9.8302, contrast: -3.6599, time: 25.13019299507141s
+--->Valid focuser: 0, C:     0.100000, loss: 25709.0576, entropy: 10.2855, l1norm: 9.5946, contrast: -2.0191, time: 5.252062559127808s
+--->Train focuser: 0, C:     1.000000, loss: 2426.9045, entropy: 9.8686, l1norm: 9.8160, contrast: -4.1867, time: 40.12260341644287s
+--->Valid focuser: 0, C:     1.000000, loss: 29882.4327, entropy: 10.2835, l1norm: 9.5943, contrast: -2.0326, time: 5.097546577453613s
+--->Train focuser: 0, C:    10.000000, loss: 218.1869, entropy: 9.8253, l1norm: 9.8075, contrast: -4.5558, time: 54.8885543346405s
+--->Valid focuser: 0, C:    10.000000, loss: 38404.6025, entropy: 10.2916, l1norm: 9.5961, contrast: -1.9994, time: 5.046655178070068s
+--->Train focuser: 0, C:   100.000000, loss: 6567.4819, entropy: 9.9442, l1norm: 9.8307, contrast: -3.6488, time: 69.39364624023438s
+--->Valid focuser: 0, C:   100.000000, loss: 49534.3424, entropy: 10.2992, l1norm: 9.5977, contrast: -1.9688, time: 5.200746059417725s
+--->Train focuser: 1, C:     0.010000, loss: 14815.9180, entropy: 9.9572, l1norm: 9.8490, contrast: -3.5904, time: 84.40867638587952s
+--->Valid focuser: 1, C:     0.010000, loss: 24523.0923, entropy: 10.2857, l1norm: 9.5946, contrast: -2.0122, time: 5.339654207229614s
+--->Train focuser: 1, C:     0.100000, loss: 8830.2930, entropy: 9.8908, l1norm: 9.8358, contrast: -4.0595, time: 99.25540518760681s
+--->Valid focuser: 1, C:     0.100000, loss: 24801.1440, entropy: 10.2683, l1norm: 9.5910, contrast: -2.1020, time: 5.303137302398682s
+--->Train focuser: 1, C:     1.000000, loss: 2065.0496, entropy: 9.8313, l1norm: 9.8244, contrast: -4.5055, time: 113.39413022994995s
+--->Valid focuser: 1, C:     1.000000, loss: 29120.1290, entropy: 10.2656, l1norm: 9.5904, contrast: -2.1160, time: 5.325498580932617s
+--->Train focuser: 1, C:    10.000000, loss: 190.1461, entropy: 9.7983, l1norm: 9.8181, contrast: -4.7945, time: 127.86485862731934s
+--->Valid focuser: 1, C:    10.000000, loss: 37025.5015, entropy: 10.2723, l1norm: 9.5919, contrast: -2.0880, time: 5.32362699508667s
+--->Train focuser: 1, C:   100.000000, loss: 1791.2981, entropy: 9.9607, l1norm: 9.8498, contrast: -3.5437, time: 141.9430365562439s
+--->Valid focuser: 1, C:   100.000000, loss: 41355.7829, entropy: 10.2901, l1norm: 9.5959, contrast: -2.0122, time: 5.346277713775635s
+---Best C [1.0, 1.0]
+--->Train ensemble: 2, loss: 17633.9470, entropy: 9.8852, l1norm: 9.7760, contrast: -4.0669, time: 24.46658730506897s
+--->Valid ensemble: 2, loss: 28267.5960, entropy: 10.2524, l1norm: 9.5876, contrast: -2.1898, time: 9.660863637924194s
+--->Test ensemble: 2, loss: 23100.7540, entropy: 9.9706, l1norm: 9.8279, contrast: -3.9824, time: 9.986080646514893s
+[Finished in 454.8s]
