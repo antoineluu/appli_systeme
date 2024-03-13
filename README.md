@@ -1,32 +1,6 @@
-# ECELMs
+# Autofocus SAR project code
 
-This is a PyTorch implementation of paper "Fast SAR Autofocus based on Ensemble Convolutional Extreme Learning Machine". [pdf](https://www.mdpi.com/2072-4292/13/14/2683/pdf), [doi](https://www.mdpi.com/2072-4292/13/14/2683)
-
-Inaccurate Synthetic Aperture Radar (SAR) navigation information will lead to unknown phase errors in SAR data. Uncompensated phase errors can blur the SAR images. Autofocus is a technique that can automatically estimate phase errors from data. However, existing autofocus algorithms either have poor focusing quality or a slow focusing speed. In this paper, an ensemble learning-based autofocus method is proposed. Convolutional Extreme Learning Machine (CELM) is constructed and utilized to estimate the phase error. However, the performance of a single CELM is poor. To overcome this, a novel, metric-based combination strategy is proposed, combining multiple CELMs to further improve the estimation accuracy. The proposed model is trained with the classical bagging-based ensemble learning method. The training and testing process is non-iterative and fast. Experimental results conducted on real SAR data show that the proposed method has a good trade-off between focusing quality and speed.
-
-![Graphical Abstract of Bagging-ECELMs](./GraphicalAbstractBaggingECELMs.png "Graphical Abstract of Bagging-ECELMs")
-
-# Prepare
-
-Please update the value of ``SAR_AF_DATA_PATH`` in 'data.yaml' to your dataset path.
-
-Please install our newest version of package ``torchbox`` and ``torchsar`` by ``pip install torchbox torchsar``. 
-
-# Training
-
-```
-python train.py
-```
-
-# Testing
-
-```
-python test.py
-```
-
-# Citation
-
-If you find the dataset or this code is useful, please kindly cite our paper and star our pakcage [AutofocusSAR](https://github.com/aisari/AutofocusSAR) on GitHub:
+This repository and the data was taken and adapted from this [project](https://github.com/aisari/AutofocusSAR)
 
 ```bib
 @article{Liu2021Fast,
@@ -42,4 +16,36 @@ If you find the dataset or this code is useful, please kindly cite our paper and
 }
 ```
 
+
+# Prepare
+Python version: 3.9.9
+Please update the value of ``SAR_AF_DATA_PATH`` in 'data.yaml' to your dataset path.
+You should also 
+Do pip ``pip install -r requirements.txt``
+
+# Download
+
+
+## Model
+(``RealPE.tar.bz2``) on ALOS PALSAR dataset from [Google Drive](https://drive.google.com/drive/folders/1aAIdmY-pYGH3PCuHVTf43Wh0Hcg7mzIb?usp=sharing). Put it here and uncompress it.
+64CELMs model trained by the authors [doi](https://doi.org/10.3390/rs13142683)
+The models we trained is [32CELMs](/snapshot/BaggingECELMs/RealPE/2021/weights/32CELMs.pth.tar) and [8CELMs](/snapshot/BaggingECELMs/RealPE/2021/weights/8CELMs.pth.tar)
+## Data: 
+Image patches with size 256×256:[Part 1](https://mega.nz/folder/02khBbbb#eeWwsYAGVXVpSah9wn5lUQ) [Part 2](https://mega.nz/folder/DY8EzDya#BH3z6N7dEzL05C5OF8xlMw)
+(More than 15 Gb)
+
+
+# Training
+
+```
+python train.py
+Configure the right model in ecelm.yaml
+```
+
+# Testing
+
+```
+python test.py
+Select the right .pth filename to use the model you want, then execute.
+```
 
